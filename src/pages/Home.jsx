@@ -1,10 +1,18 @@
 import React from 'react';
-import ThreeDCarousel from '../component/ThreeDCarousel';
+import HeroSection from '../component/HeroSection';
+import IndustryCarousel from '../component/home/IndustryCarousel';
+import FAQSection from '../component/home/FAQSection';
+import PartnersSection from '../component/home/PartnersSection';
+import ReviewsSection from '../component/home/ReviewsSection';
 
 const Home = () => {
   return (
     <div>
-      <ThreeDCarousel/>
+      <HeroSection></HeroSection>
+      <IndustryCarousel></IndustryCarousel>
+      <FAQSection></FAQSection>
+      <PartnersSection></PartnersSection>
+      <ReviewsSection></ReviewsSection>
     </div>
   );
 };

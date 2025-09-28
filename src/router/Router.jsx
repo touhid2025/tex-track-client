@@ -1,18 +1,17 @@
 import { createBrowserRouter } from "react-router";
 import MainLayOut from "../layout/MainLayOut";
 import Home from "../pages/Home";
-import Exam from "../pages/Exam";
-import Chatbot from "../pages/Chatbot";
-import Leaderboard from "../pages/Leaderboard";
 import Error from "../pages/Error";
 import Login from "../pages/Login";
-import Signup from "../pages/Signup";
-import RegisterLayout from "../layout/RegisterLayout";
 import AdminDashboard from "../component/AdminDashboard";
 import AddMCQ from "../admin/AddMCQ";
 import Results from "../admin/Results";
 import Users from "../admin/Users";
 import ManageMCQs from "../admin/ManageMCQs";
+import Contact from "../pages/Contact";
+import AboutPage from "../pages/AboutPage";
+import Features from "../pages/Features";
+import RegisterPage from "../pages/RegisterPage";
 
 
 const router = createBrowserRouter([
@@ -25,33 +24,28 @@ const router = createBrowserRouter([
             element: <Home></Home>,
         },
         {
-            path: '/exam',
-            element: <Exam></Exam>,
+            path: '/features',
+            element: <Features></Features>,
+        },
+        
+        {
+            path: '/about',
+            element: <AboutPage></AboutPage>,
         },
         {
-            path: '/chatbot',
-            element: <Chatbot></Chatbot>,
+            path: '/contact',
+            element: <Contact></Contact>,
         },
         {
-            path: '/leaderboard',
-            element: <Leaderboard></Leaderboard>,
+              path: '/login',
+              element: <Login></Login>,
+        },
+        {
+              path: '/signup',
+              element: <RegisterPage></RegisterPage>,
         }
     ]
   },
-  {
-          path: '/log',
-          element: <RegisterLayout></RegisterLayout>,
-          children: [
-            {
-              path: '/log/login',
-              element: <Login></Login>,
-            },
-            {
-              path: '/log/signup',
-              element: <Signup></Signup>,
-            }
-          ],
-        },
         {
           path: '/admin',
           element: <AdminDashboard></AdminDashboard>,
